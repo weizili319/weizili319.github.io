@@ -17,7 +17,7 @@ title: Weizi Li's website
 author: Weizi Li
 email: weizili319@gmail.com
 description: The personal website of Weizi Li
-baseurl: "website" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
