@@ -1,0 +1,41 @@
+.pagination {
+  border-top: .5px solid $grey-2;
+  padding-top: 2rem;
+  position: relative;
+  text-align: center;
+
+
+  .top {
+    @include transition(all .3s ease-out);
+    color: $default-color;
+    opacity: .6;
+    font-size: 1rem;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .arrow {
+    @include transition(all .3s ease-out);
+    color: $default-color;
+    position: absolute;
+    opacity: .6;
+    font-size: 1rem;
+    font-style: italic;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0;
+  }
+}

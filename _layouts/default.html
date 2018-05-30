@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <ul>
+          <li><a href="/index.html">About / <span class="cn">关于</span></a></li>
+          <li><a href="{{'/publications'}}/">Publications / <span class="cn">论文</span></a></li>
+          <li><a href="{{'/blog'}}/">Blog / <span class="cn">博客</span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer>
+        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author }}
+    </footer>
+  </body>
+</html>

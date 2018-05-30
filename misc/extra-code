@@ -1,0 +1,22 @@
+Count the number of minutes to read an article:
+
+Put in _layouts/post.html between <div class="post-info"></div>
+
+For English:
+{% capture words %}
+{{ page.content |  number_of_words }}
+{% endcapture %}
+{% unless words contains "-" %}
+{{ words | plus: 250 | divided_by: 250 | round | append: " minute read" }}
+{% endunless %}
+
+For Chinese:
+{% capture words %}
+{{ page.content |  size }}
+{% endcapture %}
+{% unless words contains "-" %}
+{{ words | times: 0.85 | plus: 300 | divided_by: 300 | round | append: " minute read" }}
+{% endunless %}
+
+
+

@@ -1,0 +1,31 @@
+.bio {
+  padding-top: 4rem;
+
+  &-pic {
+    padding-bottom: 1rem;
+    img {
+        width: 240px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+  }
+
+
+  &-sep {
+    width: .5rem;
+    margin: 0 auto;
+  }
+
+
+  &-text-cn {
+    font-family: $font-kaiti;
+  }
+
+
+  p {
+    margin: 3rem;
+    text-align: center;
+  }
+
+
+}

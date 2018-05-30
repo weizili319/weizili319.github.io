@@ -1,0 +1,31 @@
+// Colors
+$default-color: #555;
+$default-dark: #353535;
+$default-light: #aaa;
+$grey-1: #979797;
+$grey-2: #e5e5e5;
+$grey-3: #f9f9f9;
+$white: #fff;
+$blue: #4a9ae1;
+$shadow-color: rgba(0, 0, 0, .2);
+$code-color: #bf616a;
+
+// Fonts
+$font-main: "Lato", Helvetica, Arial, sans-serif;
+$font-second: 'Lato', sans-serif;
+$font-third: 'Open Sans', sans-serif;
+$monospaced: Menlo, Monaco, monospace;
+$font-kaiti: "KaiTi", "楷体";
+$font-yahei: "Microsoft Yahei", "微软雅黑";
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+          transition: $args;
+}

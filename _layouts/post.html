@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}
+    {% if page.title_cn %}
+      /&nbsp;<span class="cn">{{ page.title_cn }}</span>
+    {% endif %}
+  </h1>
+
+  <div class="post-info">
+    {% if page.date %}
+      <a href="/time#{{page.date | date: "%Y"}}" >{{ page.date | date: "%Y.%m.%d" }}</a>
+    {% endif %}
+    {% if page.tags %}
+      <span class="post-divider">–</span>
+      {% for tag in page.tags %}
+      <a href="/tags#{{ tag }}" >{{ tag }}</a>&nbsp;&nbsp;
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="post-line">
+  </div>
+
+  <div>
+    {{ content }}
+  </div>
+</div>
+
+
+<div class="pagination">
+  {% if page.next.url %}
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;&nbsp newer / <span class="cn">新一篇</span></a>
+  {% endif %}
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">older / <span class="cn">旧一篇</span>&nbsp&#8594;</a>
+  {% endif %}
+
+  <a href="#" class="top">Top</a>
+</div>

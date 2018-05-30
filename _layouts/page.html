@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}
+    {% if page.title_cn %}
+      /&nbsp;<span class="cn">{{ page.title_cn }}</span>
+    {% endif %}
+  </h1>
+
+  <div class="post-info"></div>
+  <div class="post-line"></div>
+
+  {{ content }}
+</div>
