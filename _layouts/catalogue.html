@@ -12,9 +12,13 @@ layout: default
           {% endif %}
         </h1>
         <div class="catalogue-line"></div>
-        <p>
-          {{ post.content | strip_html | truncatewords: 30 }}
-        </p>
+        {% if post.excerpt %}
+          <p>{{ post.excerpt }}</p>
+        {% else %}
+          <p>
+            {{ post.content | strip_html | truncatewords: 30 }}
+          </p>
+        {% endif %}
         <span  class="catalogue-info">{{ post.date | date: "%Y.%m.%d" }}
           {% if post.tags %}
             <span class="post-divider">–</span>

@@ -5,13 +5,17 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}
     {% if page.title_cn %}
-      /&nbsp;<span class="cn">{{ page.title_cn }}</span>
+      /&nbsp;<span class="cn">{{ page.title_cn }}</cn>
     {% endif %}
   </h1>
 
   <div class="post-info">
     {% if page.date %}
       <a href="/time#{{page.date | date: "%Y"}}" >{{ page.date | date: "%Y.%m.%d" }}</a>
+    {% endif %}
+    {% if page.title_cn %}
+      <span class="post-divider">–</span>
+      <a href="#" >cn</a>
     {% endif %}
     {% if page.tags %}
       <span class="post-divider">–</span>
@@ -21,8 +25,7 @@ layout: default
     {% endif %}
   </div>
 
-  <div class="post-line">
-  </div>
+  <div class="post-line"></div>
 
   <div>
     {{ content }}

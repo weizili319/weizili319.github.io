@@ -27,7 +27,7 @@ markdown: kramdown
 theme: tale
 permalink: /:categories/:year-:month-:day:title
 paginate_path: "/blog/page:num/"
-paginate: 16
+paginate: 5
 plugins:
   - jekyll-feed
 
