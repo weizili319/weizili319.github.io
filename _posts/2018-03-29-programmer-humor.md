@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "A programmer's humor"
-title_cn: "程序员的小幽默"
 excerpt: A little joke I invented.
-tags: [misc]
+tags: [random]
 ---
 
 A: “Am I fat?”

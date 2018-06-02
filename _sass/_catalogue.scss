@@ -24,7 +24,7 @@
   &-title {
     color: $default-dark;
     display: block;
-    font-size: 1.2rem;
+    font-size: $font-size-normal-plus1;
     margin: .5rem 0;
     text-align: left;
 
@@ -42,7 +42,7 @@
 
   &-info {
     color: $default-light;
-    font-size: 0.9rem;
+    font-size: $font-size-normal-minus2;
     text-align: left;
   }
 }

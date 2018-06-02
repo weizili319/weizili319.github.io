@@ -41,13 +41,13 @@
 
   &-title {
     color: $default-dark;
-    font-size: 1.2rem;
+    font-size: $font-size-normal-plus1;
     margin-bottom: 1rem;
   }
 
   &-info {
     color: $default-light;
-    font-size: 0.9rem;
+    font-size: $font-size-normal-minus2;
     float: right;
   }
 
@@ -56,7 +56,7 @@
   }
 
   &-top {
-    font-size: 1rem;
+    font-size: $font-size-normal-minus1;
     text-align: center;
   }
 

@@ -6,13 +6,40 @@
   }
 
   &-title {
-    font-size: 1.4rem;
+    font-size: $font-size-normal-plus3;
     margin: 0;
+  }
+
+  &-paper {
+    font-size: $font-size-normal-plus1;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    a {
+      @include transition(all .3s ease-out);
+      color: $default-color;
+      opacity: .6;
+    }
+
+    a:hover,
+    a:focus {
+      opacity: 1;
+      text-decoration: none;
+    }
+
+  }
+
+  &-project-info {
+    color: $default-light;
+    font-size: $font-size-normal;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+
   }
 
   &-info {
     color: $default-light;
-    font-size: 0.9rem;
+    font-size: $font-size-normal-minus2;
     margin-top: 1.5rem;
     margin-bottom: 2.5rem;
 
@@ -50,7 +77,7 @@
   img + em {
     color: $default-light;
     display: block;
-    font-size: 0.9rem;
+    font-size: $font-size-normal-minus2;
     font-style: normal;
     text-align: center;
   }

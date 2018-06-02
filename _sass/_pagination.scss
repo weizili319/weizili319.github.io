@@ -9,7 +9,7 @@
     @include transition(all .3s ease-out);
     color: $default-color;
     opacity: .6;
-    font-size: 1rem;
+    font-size: $font-size-normal-minus1;
 
     &:hover {
       opacity: 1;
@@ -21,7 +21,7 @@
     color: $default-color;
     position: absolute;
     opacity: .6;
-    font-size: 1rem;
+    font-size: $font-size-normal-minus1;
     font-style: italic;
 
     &:hover,

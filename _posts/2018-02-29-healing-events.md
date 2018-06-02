@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Healing things"
-title_cn: "治愈的事情"
 tags: [life]
 ---
 

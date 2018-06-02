@@ -1,0 +1,63 @@
+---
+layout: page
+---
+
+<div class="archive">
+
+  <!-- Tag List -->
+  <div>
+    <!-- Get the tag name for every tag on the site and set them
+    to the `site_tags` variable. -->
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+
+    <!-- `tag_words` is a sorted array of the tag names. -->
+    {% assign tag_words = site_tags | split:',' | sort %}
+
+    <!-- List of all tags -->
+    {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+      {% capture this_word %}{{ tag_words[item] }}{% endcapture %}
+        <a href="#{{ this_word | cgi_escape }}">{{ this_word }}
+          <span>({{ site.tags[this_word].size }})</span>
+        </a>
+        <br>
+    {% endunless %}{% endfor %}
+  </div>
+
+
+  <!-- Tag Posts -->
+  <div>
+    {% for item in (0..site.tags.size) %}
+    <div class="archive-tag-post">
+        {% unless forloop.last %}
+        {% capture this_word %}{{ tag_words[item] }}{% endcapture %}
+        <div class="archive-title" id="{{ this_word | cgi_escape }}">
+          {{ this_word }}
+        </div>
+        {% for post in site.tags[this_word] %}
+          {% if post.title != null %}
+          <div>
+            <span>
+              <a href="{{ post.url }}">
+                {{ post.title }}
+                {% if post.title_cn %}
+                  /&nbsp;<span class="cn">{{ post.title_cn }}</span>
+                {% endif %}
+              </a>
+            </span>
+            <span class="archive-info">
+              {{ post.date | date: "%Y.%m.%d" }}
+            </span>
+          </div>
+          <div class="archive-finish">
+          </div>
+        {% endif %}
+      {% endfor %}
+      <div class="archive-top"> <a href="#">Top</a>
+      </div>
+      {% endunless %}
+    </div>
+    {% endfor %}
+  </div>
+
+
+</div>

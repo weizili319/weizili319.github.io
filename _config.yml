@@ -25,7 +25,7 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 theme: tale
-permalink: /:categories/:year-:month-:day:title
+permalink: /blog/:year/:month/:title
 paginate_path: "/blog/page:num/"
 paginate: 5
 plugins:

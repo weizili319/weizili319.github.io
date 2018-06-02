@@ -18,6 +18,14 @@ $monospaced: Menlo, Monaco, monospace;
 $font-kaiti: "KaiTi", "楷体";
 $font-yahei: "Microsoft Yahei", "微软雅黑";
 
+// Font size
+$font-size-normal-plus3: 1.3rem;
+$font-size-normal-plus1: 1.1rem;
+$font-size-normal: 1rem;
+$font-size-normal-minus1: 0.9rem;
+$font-size-normal-minus2: 0.8rem;
+
+
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;
      -moz-box-sizing: $type;
